@@ -31,7 +31,7 @@ body {
   padding: 0 16px;
 }
 
-.features__span, .hero__span {
+.features__span, .hero__span, .insights__span {
   margin-bottom: 24px;
   display: inline-block;
   padding: 2px 8px;
@@ -42,6 +42,20 @@ body {
   font-weight: 500;
   line-height: 18px;
   color: rgb(255, 255, 255);
+}
+
+.features__title, .insights__title {
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 44px;
+  color: rgb(42, 51, 66);
+  letter-spacing: -0.02em;
+}
+.features__text, .insights__text {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 30px;
+  color: rgb(42, 51, 66);
 }
 
 #header {
@@ -479,19 +493,6 @@ body {
 .features {
   padding: 90px 0 100px;
   text-align: center;
-}
-.features__title {
-  font-size: 36px;
-  font-weight: 700;
-  line-height: 44px;
-  color: rgb(42, 51, 66);
-  letter-spacing: -0.02em;
-}
-.features__text {
-  font-size: 20px;
-  font-weight: 500;
-  line-height: 30px;
-  color: rgb(42, 51, 66);
 }
 .features__text--wrapper {
   padding: 0 111px;

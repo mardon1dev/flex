@@ -4,12 +4,7 @@
 .features{
     padding: 90px 0 100px;
     text-align: center;
-    &__title{
-        @include textStyle($fs:36px, $fw:700, $lh:44px, $clr:$subtitle-color);
-        letter-spacing: -0.02em;
-    }
     &__text{
-        @include textStyle($fs:20px, $fw:500, $lh:30px, $clr:$subtitle-color);
         &--wrapper{
             padding: 0 111px;
             margin-top: 16px;
