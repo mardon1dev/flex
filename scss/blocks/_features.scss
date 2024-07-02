@@ -32,11 +32,11 @@
     }
     &__title{
         margin-top: 24px;
-        @include textStyle($fs:24px, $fw:700, $lh:32px, $clr:$subtitle-color)
+        @include textStyle($fs:24px, $fw:700, $lh:32px, $clr:$subtitle-color);
     }
     &__text{
         margin-top: 16px;
-        @include textStyle($fs:16px, $fw:500, $lh:24px, $clr:$secondary-color)
+        @include textStyle($fs:16px, $fw:500, $lh:24px, $clr:$secondary-color);
     }
     &:hover{
         cursor: pointer;

@@ -1,0 +1,139 @@
+#insights{
+    margin-top: 65px;
+}
+.insights{
+    width: 100%;
+    padding-top: 90px;
+    &__text{
+        margin-top: 16px;
+        &--wrapper{
+            max-width: 919px;
+        }
+    }
+    &__item{
+        padding: 120px 0;
+        @include display($wrap:nowrap, $direction:row, $items:center, $justify:space-between);
+        gap: 20px;
+    }
+    & .item{
+        &__features{
+            max-width: 450px;
+            width: 100%;
+            &--title{
+                @include textStyle($fs:48px, $fw:700, $lh:60px, $clr:$subtitle-color);
+            }
+            &--text{
+                margin-top: 32px;
+                margin-bottom: 25px;
+                @include textStyle($fs:20px, $fw:400, $lh:30px, $clr:$secondary-color)
+            }
+            &--btn{
+            }
+        }
+        &__features--first{
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+        }
+        &__insight{
+            position: relative;
+            padding: 13px 0 0 80px;
+
+            &--img{
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 56px;
+                height: 56px;
+                background-color: $btn-color;
+                display: grid;
+                place-items: center;
+                border-radius: 8px;
+                color: $primary-color;
+            }
+            &--title{
+                margin-bottom: 14px;
+                @include textStyle($fs:24px, $fw:700, $lh:32px, $clr:$subtitle-color);
+            }
+            &--text{
+                @include textStyle($fs:16px, $fw:500, $lh:24px, $clr:$secondary-color);
+            }
+        }
+        &__img{
+            max-width: 554px;
+            width: 100%;
+            position: relative;
+            & img{
+                width: 100%;
+            }
+            &::before{
+                content: "";
+                position: absolute;
+                top: -32px;
+                left: -30px;
+                width: 130px;
+                height: 130px;
+                background-image: url("../../images/insight-img1.png");
+                background-repeat: no-repeat;
+                background-size: 130px 130px;
+            }
+            &::after{
+                content: "";
+                position: absolute;
+                bottom: -32px;
+                right: -32px;
+                width: 150px;
+                height: 90px;
+                background-image: url("../../images/insight-img2.png");
+                background-repeat: no-repeat;
+                background-size: 150px 90px;
+            }
+        }
+    }
+}
+
+@media (max-width:768px) {
+    .insights{
+        &__span{
+            text-align: center;
+            display: inline-block;
+            margin-left: auto;
+        }
+        &__title, &__text{
+            text-align: center;
+        }
+        &__item{
+            padding: 60px 0;
+            flex-direction: column;
+            gap: 30px;
+        }
+        & .item{
+            &__features{
+                &--title{
+                    font-size: 28px;
+                    line-height: 30px;
+                }
+                &--text{
+                    font-size: 16px;
+                    line-height: 24px;
+                }
+            }
+            &__img{
+                &::before{
+                    top: -20px;
+                    left: -22px;
+                    width: 100px;
+                    height: 100px;
+                    background-size: 100px 100px;
+                }
+                &::after{
+                    bottom: -22px;
+                    right: -22px;
+                    width: 100px;
+                    height: 70px;
+                    background-size: 100px 80px;
+                }
+            }
+        }
+    }
+}
