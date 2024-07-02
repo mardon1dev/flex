@@ -1,0 +1,178 @@
+#hero{
+    margin-top: 80px;
+}
+.hero{
+    padding: 88px 190px;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    background-color: rgba(42, 51, 66, 1);
+    border-radius: 24px;
+    background-image: url("../../images/hero-img1.png"), url("../../images/hero-img4.png");
+    background-repeat: no-repeat, no-repeat;
+    background-position: left top, right bottom;
+    position: relative;
+    &::before, &::after{
+        content: "";
+        position: absolute;
+        width: 150px;
+        height: 90px;
+        background-repeat: no-repeat;
+    }
+    &::before{
+        bottom: 24px;
+        left: 24px;
+        background-image: url("../../images/hero-img2.png");
+    }
+    &::after{
+        top: 24px;
+        right: 24px;
+        background-image: url("../../images/hero-img3.png");
+    }
+
+    &__span{
+        margin-bottom: 24px;
+        display: inline-block;
+        padding: 2px 8px;
+        background-color: $btn-color;
+        border-radius: 36px;
+        box-shadow: 0px 1px 2px 0px rgba(105, 81, 255, 0.05);
+        @include textStyle($fs:12px, $fw:500, $lh:18px, $clr:$primary-color);
+    }
+    &__title{
+        margin-bottom: 24px;
+        @include textStyle($fs:60px, $fw:700, $lh:72px,$clr:$primary-color);
+        letter-spacing: -0.02em;
+    }
+    &__text{
+        margin-bottom: 24px;   
+        @include textStyle($fs:20px, $fw:500, $lh:30px, $clr:$secondary-color);
+    }
+    &__form{
+        max-width: 543px;
+        width: 100%;
+        margin: 0 auto;
+        @include display($wrap:nowrap, $direction:row, $items:center, $justify:space-between);
+        position: relative;
+        gap: 20px;
+        &::after{
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 16px;
+            bottom: 0;
+            margin: auto 0;
+            width: 20px;
+            height: 16px;
+            background-image: url("../../images/email.svg");
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        &--input{
+            max-width: 320px;
+            width: 100%;            
+            padding: 16px 14px 16px 48px;
+            background-color: $primary-color;
+            border: 1px solid $primary-color;
+            border-radius: 8px;
+            outline: none;
+            @include textStyle($fs:16px, $fw:500, $lh:24px, $clr:$secondary-color);
+            position: relative;
+            &::placeholder{
+                color: $secondary-color;
+            }
+        }
+        &--button{
+            max-width: 207px;
+            width: 100%;
+            @include textStyle($fs:14px, $fw:500, $lh:24px, $clr:$primary-color);
+            border: 1px solid $btn-color;
+            border-radius: 6px;
+            padding: 16px 28px;
+            background-color: $btn-color;
+            box-shadow: 0px 1px 2px 0px rgba(105, 81, 255, 0.05);
+            transition: color, .3s ease;
+            &:hover{
+                background-color: $primary-color;
+                color: $btn-color;
+            }
+        }
+    }
+    &__trial{
+        margin-top: 16px;
+        @include textStyle($fs:14px, $fw:500, $lh:20px, $clr:$secondary-color)
+    }
+}
+
+@media (max-width:992px) {
+    .hero{
+        padding:100px;
+        background-size: 150px 150px;
+        &__title{
+            font-size: 46px;
+            line-height: 56px;
+        }
+    }
+}
+
+@media (max-width:768px) {
+    .hero{
+        padding:100px 50px;
+        background-size: 100px 100px;
+        &::before, &::after{
+            width: 100px;
+            height: 90px;
+        }
+        &::before{
+            bottom: 12px;
+            left: 12px;
+        }
+        &::after{
+            top: 12px;
+            right: 12px;
+        }    
+        &__title{
+            font-size: 32px;
+            line-height: 36px;
+        }
+        &__text{
+            margin-bottom: 24px; 
+            font-size: 18px;
+            line-height: 25px;  
+        }
+        &__form{
+            &--button{
+                padding: 16px 18px;
+            }
+        }
+    }
+}
+
+@media (max-width:576px) {
+    .hero{
+        &::before, &::after{
+            width: 80px;
+            height: 80px;
+        }
+        &__form{
+            flex-direction: column;
+            &::after{
+                display: none;
+            }
+            &::before{
+                content: "";
+                position: absolute;
+                top: 20px;
+                left: 20px;
+                width: 20px;
+                height: 16px;
+                background-image: url("../../images/email.svg");
+                background-repeat: no-repeat;
+                z-index: 3;
+            }
+            &--input,&--button{
+                max-width: 100%;
+            }
+        }
+    }
+}
