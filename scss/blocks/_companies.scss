@@ -1,0 +1,40 @@
+#companies{
+    width: 100%;
+    background-image: url("../../images/company-bg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background: radial-gradient(50% 50% at 50% 50%, rgba(247, 248, 249, 0) 0%, #F7F8F9 100%);
+    position: relative;
+    &::after{
+        content: "";
+        position: absolute;
+        bottom: -88px;
+        left: 0;
+        width: 100%;
+        height: 116px;
+        background-image: url("../../images/company-bg-ave.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+}
+.companies{
+    padding: 88px 0;
+    width: 100%;
+    text-align: center;
+    &__subtitle{
+        @include textStyle($fs:16px, $fw:500, $lh:24px, $clr:$secondary-color);
+    }
+    &__wrapper{
+        color: rgba(136, 150, 171, 1);
+        margin-top: 32px;
+        @include display($wrap:wrap, $direction:row, $items:center, $justify:space-evenly);
+        gap: 20px;
+        & svg{
+            cursor: pointer;
+        }
+        & svg:hover > path {
+            fill: $btn-color;
+        }
+    }
+}

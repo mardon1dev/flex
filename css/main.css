@@ -422,4 +422,51 @@ body {
   .hero__form--input, .hero__form--button {
     max-width: 100%;
   }
+}
+#companies {
+  width: 100%;
+  background-image: url("../../images/company-bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background: radial-gradient(50% 50% at 50% 50%, rgba(247, 248, 249, 0) 0%, #F7F8F9 100%);
+  position: relative;
+}
+#companies::after {
+  content: "";
+  position: absolute;
+  bottom: -88px;
+  left: 0;
+  width: 100%;
+  height: 116px;
+  background-image: url("../../images/company-bg-ave.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.companies {
+  padding: 88px 0;
+  width: 100%;
+  text-align: center;
+}
+.companies__subtitle {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  color: rgb(85, 105, 135);
+}
+.companies__wrapper {
+  color: rgb(136, 150, 171);
+  margin-top: 32px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 20px;
+}
+.companies__wrapper svg {
+  cursor: pointer;
+}
+.companies__wrapper svg:hover > path {
+  fill: rgb(34, 197, 94);
 }/*# sourceMappingURL=main.css.map */
