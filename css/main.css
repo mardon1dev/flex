@@ -31,7 +31,7 @@ body {
   padding: 0 16px;
 }
 
-.features__span, .hero__span, .insights__span, .item__span {
+.features__span, .hero__span, .insights__span, .item__span, .numbers__span {
   margin-bottom: 24px;
   display: inline-block;
   padding: 2px 8px;
@@ -677,6 +677,7 @@ body {
 }
 #insights {
   margin-top: 65px;
+  background-color: rgb(247, 248, 249);
 }
 
 .insights {
@@ -816,5 +817,79 @@ body {
     width: 100px;
     height: 70px;
     background-size: 100px 80px;
+  }
+}
+#numbers {
+  width: 100%;
+}
+
+.numbers {
+  padding: 88px 0;
+  width: 100%;
+  text-align: center;
+}
+.numbers__title {
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 60px;
+  color: rgb(42, 51, 66);
+}
+.numbers__text {
+  margin-top: 16px;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 30px;
+  color: rgb(85, 105, 135);
+}
+.numbers__text--wrapper {
+  max-width: 919px;
+  margin: 0 auto;
+}
+.numbers__wrapper {
+  margin-top: 64px;
+  padding: 32px 0;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.numbers__item--strong {
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 60px;
+  color: rgb(34, 197, 94);
+}
+.numbers__item--text {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 30px;
+  color: rgb(85, 105, 135);
+}
+
+@media (max-width: 768px) {
+  .numbers {
+    padding: 64px 0;
+  }
+  .numbers__title {
+    font-size: 36px;
+    line-height: 40px;
+  }
+  .numbers__text {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .numbers__wrapper {
+    margin-top: 32px;
+    justify-content: space-evenly;
+    gap: 20px;
+  }
+  .numbers__item--strong {
+    font-size: 36px;
+    line-height: 40px;
+  }
+  .numbers__item--text {
+    font-size: 16px;
+    line-height: 24px;
   }
 }/*# sourceMappingURL=main.css.map */

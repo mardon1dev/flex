@@ -1,0 +1,62 @@
+#numbers{
+    width: 100%;
+}
+.numbers{
+    padding: 88px 0;
+    width: 100%;
+    text-align: center;
+    &__title{
+        @include textStyle($fs:48px, $fw:700, $lh:60px, $clr:$subtitle-color);
+    }
+    &__text{
+        margin-top: 16px;
+        @include textStyle($fs:20px, $fw:400, $lh:30px, $clr:$secondary-color);
+        &--wrapper{
+            max-width: 919px;
+            margin: 0 auto;
+        }
+    }
+    &__wrapper{
+        margin-top: 64px;
+        padding: 32px 0;
+        @include display($wrap:wrap, $direction:row, $items:center, $justify:space-between);
+    }
+    &__item{
+        &--strong{
+            @include textStyle($fs:48px, $fw:700, $lh:60px, $clr:$btn-color);
+        }
+        &--text{
+            @include textStyle($fs:20px, $fw:400, $lh:30px, $clr:$secondary-color)
+        }
+    }
+}
+
+@media (max-width:768px) {
+    .numbers{
+        padding: 64px 0;
+        &__title{
+            font-size: 36px;
+            line-height: 40px;
+        }
+        &__text{
+            font-size: 16px;
+            line-height: 24px;
+        }
+        &__wrapper{
+            margin-top: 32px;
+            justify-content: space-evenly;
+            gap: 20px;
+        }
+        &__item{
+            &--strong{
+                font-size: 36px;
+                line-height: 40px;
+            }
+            &--text{
+                font-size: 16px;
+                line-height: 24px;
+
+            }
+        }
+    }
+}

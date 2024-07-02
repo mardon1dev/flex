@@ -1,5 +1,6 @@
 #insights{
     margin-top: 65px;
+    background-color: rgba(247, 248, 249, 1);
 }
 .insights{
     width: 100%;
@@ -25,9 +26,7 @@
             &--text{
                 margin-top: 32px;
                 margin-bottom: 25px;
-                @include textStyle($fs:20px, $fw:400, $lh:30px, $clr:$secondary-color)
-            }
-            &--btn{
+                @include textStyle($fs:20px, $fw:400, $lh:30px, $clr:$secondary-color);
             }
         }
         &__features--first{
