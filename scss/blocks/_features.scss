@@ -1,0 +1,100 @@
+#features{
+    margin-top: 88px;
+}
+.features{
+    padding: 90px 0 100px;
+    text-align: center;
+    &__title{
+        @include textStyle($fs:36px, $fw:700, $lh:44px, $clr:$subtitle-color);
+        letter-spacing: -0.02em;
+    }
+    &__text{
+        @include textStyle($fs:20px, $fw:500, $lh:30px, $clr:$subtitle-color);
+        &--wrapper{
+            padding: 0 111px;
+            margin-top: 16px;
+        }
+    }
+    &__wrapper{
+        margin-top: 48px;
+        @include display($wrap:wrap, $direction:row, $items:flex-start, $justify:space-between);
+    }
+}
+.feature{
+    padding: 32px;
+    flex: 0 0 30%;
+    width: 100%;
+    transition: all .3s ease;
+    @include display($wrap:nowrap, $direction:column, $items:center, $justify:center);
+    &__img{
+        width: 64px;
+        height: 64px;
+        display: grid;
+        place-items: center;
+        background-color: $btn-color;
+        border-radius: 6px;
+        color: $primary-color;
+    }
+    &__title{
+        margin-top: 24px;
+        @include textStyle($fs:24px, $fw:700, $lh:32px, $clr:$subtitle-color)
+    }
+    &__text{
+        margin-top: 16px;
+        @include textStyle($fs:16px, $fw:500, $lh:24px, $clr:$secondary-color)
+    }
+    &:hover{
+        cursor: pointer;
+        // box-shadow: 0px 2px 5px 2px rgba(34, 0, 255, 0.05);
+        box-shadow: 1px 1px 3px 0px $btn-color inset;
+        transform: scale(1.02);
+        border-radius: 8px;
+        background-color: $btn-color;
+        & .feature__title, .feature__text{
+            color: $primary-color;
+        }
+        & .feature__img{
+            background-color: $primary-color;
+            color: $btn-color;
+        }
+    }
+}
+
+@media (max-width:768px) {
+    .features{
+        &__text{
+            &--wrapper{
+                padding: 0;
+            }
+        }
+    }
+    .feature{
+        flex: 0 0 50%;
+    }
+}
+@media (max-width:576px) {
+    .features{
+        &__title{
+            font-size: 20px;
+            line-height: 24px;
+        }
+        &__text{
+            font-size: 14px;
+            line-height: 18px;
+        }
+        &__wrapper{
+            margin-top: 24px;
+        }
+    }
+    .feature{
+        flex: 0 0 100%;
+        &__title{
+            font-size: 18px;
+            line-height: 18px;
+        }
+        &__title{
+            font-size: 16px;
+        }
+
+    }
+}
