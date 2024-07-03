@@ -1,0 +1,69 @@
+#contact{
+    width: 100%;   
+}
+.contact{
+    padding: 88px 0;
+    text-align: center;
+    &__title{
+        margin-bottom: 16px;
+        @include textStyle($fs:48px, $fw:700, $lh:60px, $clr:$subtitle-color);
+    }
+    &__text{
+        @include textStyle($fs:20px, $fw:500, $lh:30px, $clr:$secondary-color);
+        &--wrapper{
+            max-width: 919px;
+            width: 100%;
+            margin: 0 auto;
+        }
+    }
+    &__connect{
+        margin-top: 64px;
+        @include display($wrap:nowrap, $direction:row, $items:flex-start, $justify:space-between);
+        &--item{
+            @include display($wrap:nowrap, $direction:column, $items:center, $justify:space-between);
+        }
+        &--img{
+            width: 48px;
+            height: 48px;
+            display: grid;
+            place-items: center;
+            background-color: $btn-color;
+            border-radius: 50%;
+        }
+        &--strong{
+            margin-top: 24px;
+            @include textStyle($fs:30px, $fw:700, $lh:38px, $clr:$subtitle-color);
+        }
+        &--link{
+            @include textStyle($fs:20px, $fw:500, $lh:30px, $clr:$secondary-color);
+            &:hover{
+                color: $btn-color;
+            }
+        }
+        &--social{
+            display: flex;
+            gap: 32px;
+        }
+    }
+}
+
+@media (max-width:576px) {
+    .contact{
+        padding: 64px 0;
+        &__title{
+            margin-bottom: 16px;
+            font-size: 30px;
+            line-height: 38px;
+        }
+        &__text{
+            font-size: 16px;
+            line-height: 24px;
+        }
+        &__connect{
+            margin-top: 32px;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+    }
+}

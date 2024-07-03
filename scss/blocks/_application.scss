@@ -1,0 +1,99 @@
+#application{
+    margin-top: 115px;
+}
+.application{
+    padding: 88px 0;
+    width: 100%;
+    text-align: center;
+    overflow: hidden;
+    &__title{
+        margin-bottom: 40px;
+        @include textStyle($fs:36px, $fw:700, $lh:44px, $clr:$subtitle-color);
+        letter-spacing: -0,02;
+    }
+    &__image{
+        max-width: 944px;
+        width: 100%;
+        position: relative;
+        margin: 0 auto;
+        transform: translateX(70px);
+        & img{
+            z-index: 3;
+            position: relative;
+            width: 100%;
+        }
+        &::before{
+            content: "";
+            position: absolute;
+            top: 50px;
+            left: 20px;
+            width: 289px;
+            height: 289px;
+            background-image: url("../../images/application-img1.svg");
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            z-index: 2;
+        }
+        &::after{
+            content: "";
+            position: absolute;
+            top: 70px;
+            right: 20px;
+            width: 289px;
+            height: 289px;
+            background-image: url("../../images/application-img2.svg");
+            background-repeat: no-repeat;
+            z-index: 2;
+        }
+    }
+    &__text{
+        @include textStyle($fs:20px, $fw:500, $lh:30px, $clr:$secondary-color);
+        &--wrapper{
+            max-width: 919px;
+            width: 100%;
+            margin: 0 auto;
+            margin-bottom: 24px;
+        }
+    }
+    &__contact{
+        display: block;
+        width: 100%;
+        margin: 0 auto;
+        &--btn{
+            margin-right: 20px;
+        }
+    }
+}
+
+@media (max-width:992px) {
+    .application{
+        &__image{
+            transform: translateX(70px);
+            &::after, &::before{
+                display: none;
+            }
+        }
+    }
+}
+@media (max-width:768px) {
+    .application{
+        &__image{
+            transform: translateX(50px);
+        }
+    }   
+}
+@media (max-width:576px) {
+    .application{
+        &__title{
+            font-size: 30px;
+            line-height: 40px;
+        }
+        &__image{
+            transform: translateX(0px);
+        }
+        &__text{
+            font-size: 16px;
+            line-height: 24px;
+        }
+    }
+}
