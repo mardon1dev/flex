@@ -31,7 +31,7 @@ body {
   padding: 0 16px;
 }
 
-.features__span, .hero__span, .insights__span, .item__span, .numbers__span {
+.features__span, .hero__span, .insights__span, .item__span, .numbers__span, .how-works__span {
   margin-bottom: 24px;
   display: inline-block;
   padding: 2px 8px;
@@ -75,12 +75,6 @@ body {
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-}
-.header__container {
-  max-width: 1250px;
-  width: 100%;
-  padding: 0 16px;
-  margin: 0 auto;
 }
 .header__logo {
   display: inline-block;
@@ -583,7 +577,7 @@ body {
     font-size: 18px;
     line-height: 18px;
   }
-  .feature__title {
+  .feature__text {
     font-size: 16px;
   }
 }
@@ -891,5 +885,205 @@ body {
   .numbers__item--text {
     font-size: 16px;
     line-height: 24px;
+  }
+}
+#how-works {
+  margin-top: 116px;
+  background-color: rgb(42, 51, 66);
+  position: relative;
+}
+#how-works::before {
+  content: "";
+  position: absolute;
+  top: -110px;
+  left: 0;
+  width: 100%;
+  height: 115px;
+  background-image: url("../../images/how-it-works-img1.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+#how-works::after {
+  content: "";
+  position: absolute;
+  bottom: -115px;
+  left: 0;
+  width: 100%;
+  height: 116px;
+  background-image: url("../../images/how-it-works-img2.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.how-works {
+  width: 100%;
+  padding: 88px 0;
+}
+.how-works__span {
+  background-color: rgb(220, 252, 231);
+  color: rgb(34, 197, 94);
+}
+.how-works__top {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+.how-works__info {
+  max-width: 554px;
+  width: 100%;
+}
+.how-works__img {
+  max-width: 554px;
+  width: 100%;
+  position: relative;
+  border-radius: 24px;
+  overflow: hidden;
+}
+.how-works__img:hover::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 24px;
+}
+.how-works__img:hover .how-works__img--play {
+  cursor: pointer;
+  color: rgb(34, 197, 94);
+  background-color: rgb(255, 255, 255);
+}
+.how-works__img img {
+  width: 100%;
+}
+.how-works__img--play {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 64px;
+  height: 64px;
+  display: grid;
+  place-items: center;
+  background-color: rgb(34, 197, 94);
+  border-radius: 50%;
+  color: rgb(255, 255, 255);
+}
+.how-works__title {
+  margin-bottom: 24px;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 60px;
+  color: rgb(255, 255, 255);
+}
+.how-works__text {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 30px;
+  color: rgb(85, 105, 135);
+}
+.how-works__information {
+  margin-top: 48px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+  row-gap: 32px;
+}
+
+.information__item {
+  padding-bottom: 24px;
+  flex: 0 0 31%;
+  width: 100%;
+  min-height: 174px;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+.information__item--number {
+  display: inline-block;
+  width: 56px;
+  height: 56px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background-color: rgb(34, 197, 94);
+  color: rgb(255, 255, 255);
+}
+.information__item--title {
+  margin-top: 16px;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 32px;
+  color: rgb(255, 255, 255);
+}
+.information__item--text {
+  margin-top: 8px;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  color: rgb(85, 105, 135);
+}
+.information__item:hover {
+  cursor: pointer;
+  box-shadow: 1px 1px 3px 0px rgb(34, 197, 94) inset;
+  transform: scale(1.02);
+  border-radius: 8px;
+  background-color: rgb(34, 197, 94);
+  padding-top: 5px;
+  padding-left: 5px;
+}
+.information__item:hover .information__item--title, .information__item:hover .information__item--text {
+  color: rgb(255, 255, 255);
+}
+.information__item:hover .information__item--number {
+  background-color: rgb(255, 255, 255);
+  color: rgb(34, 197, 94);
+}
+
+@media (max-width: 992px) {
+  .how-works__title {
+    font-size: 36px;
+    line-height: 40px;
+  }
+  .how-works__text {
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+@media (max-width: 768px) {
+  .how-works__top {
+    flex-direction: column;
+  }
+  .how-works .information__item {
+    flex: 0 0 45%;
+  }
+}
+@media (max-width: 576px) {
+  .how-works {
+    padding: 44px 0;
+  }
+  .how-works__top {
+    flex-direction: column;
+  }
+  .how-works .information__item {
+    flex: 0 0 100%;
+  }
+  .how-works .information__item--title {
+    font-size: 18px;
+    line-height: 18px;
+  }
+  .how-works .information__item--title {
+    font-size: 16px;
   }
 }/*# sourceMappingURL=main.css.map */
