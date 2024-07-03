@@ -1,0 +1,37 @@
+#footer{
+    background-color: $subtitle-color;
+    & hr{
+        border: 1px solid rgba(51, 63, 81, 1)
+    }
+}
+.footer{
+    padding: 88px 0 45px;
+    text-align: center;
+    &__logo{
+        display: inline-block;
+    }
+    &__list{
+        @include display($wrap:wrap, $direction:row, $items:center, $justify:space-evenly);
+        margin-top: 32px;
+        &--link{
+            @include textStyle($fs:16px, $fw:500, $lh:24px, $clr:$secondary-color);
+            transition: color, .3s ease;
+            &:hover{
+                color: $btn-color;
+            }
+        }
+    }
+    &__privacy{
+        text-align: center;
+        padding: 39px 0 84px;
+        @include textStyle($fs:20px, $fw:500, $lh:30px, $clr:$secondary-color)
+    }
+}
+@media (max-width:576px) {
+    .footer{
+        &__list{
+            flex-direction: column;
+            gap: 10px;
+        }
+    }
+}
